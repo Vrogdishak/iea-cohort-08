@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if test -z "$@"
+	then
+		echo 'Please enter a file name'
+	else
+for filename in "$@"; do
+	file.contents=cat $filename
+		if test $file.contents = ""
+			then
+			echo 'file is empty'
+		fi
+		if test -f $filename
+			then
+			echo $filename 'File exists'
+			echo 'Checked by Robin Knepper' >> $filename
+		fi
+done
+fi

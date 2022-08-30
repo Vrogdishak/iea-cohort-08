@@ -1,0 +1,10 @@
+#!/bin/bash
+if test -z $1 
+	then
+		echo 'Please enter a file name'
+	else
+		if test -f $1 
+			then
+			echo 'File exists'
+		fi
+fi

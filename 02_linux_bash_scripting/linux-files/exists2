@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test -z "$@"
+	then
+		echo 'Please enter a file name'
+	else
+for filename in "$@"; do
+		if test -f $filename
+			then
+			echo $filename 'File exists'
+			echo 'Checked by Robin Knepper' >> $filename
+		fi
+done
+fi
